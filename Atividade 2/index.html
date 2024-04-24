@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function entra(){
+         $us = this.form1.usuario.value
+         $se = this.form1.senha.value
+         if($us!="senai" || $se!="123"){
+            document.write("<a href='./index.html'>")
+            document.write("<center><img src='./Img/nao.jpg' width='40%'><font size='5'><br> Senha ou usuario incorreta. Clique aqui e tente novamente.")
+         }
+         else{
+            document.write("<a href='./Sites/formulario.html'>")
+            document.write("<img src='./Img/verificado.jpg'><br> Aprovado! Clique aqui para continuar</a>")
+         }
+        }
+    </script>
+</head>
+<body>
+<CENTER>
+    <br>
+    <img src="Img/Senai.jpg" width="40%"> <br> <br>
+    <form name="form1" action="" method="post" onsubmit="return entra()">
+        USUÁRIO <br>
+        <input type="text" name="usuario"> <br>
+        SENHA <br>
+        <input type="password" name="senha"> <br> <br>
+        <input type="submit" value="Entrar" name="Entrar"> <br>
+    </form>
+</CENTER>
+</body>
+</html>

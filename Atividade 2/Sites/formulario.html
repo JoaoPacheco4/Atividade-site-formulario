@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function teste() {
+            $nome = this.FORM1.nm.value
+            $idade = this.FORM1.id.value
+            $genero = this.FORM1.fGenero.value
+            $curso = this.FORM1.fCurso.value
+            $turno = this.FORM1.fTurno.value
+            $prof1 = this.FORM1.prof1.value
+            $prof2 = this.FORM1.prof2.value
+            $disc = this.FORM1.fav.value
+            if ($genero == "masc") {
+                document.write("<font size='6' color='light_blue'>")
+                document.write("Bem-vindo ", $nome, ", você tem ", $idade, " anos e vai cursar o curso de ", $curso, " no turno da ", $turno, " com os professores ", $prof1, " e ", $prof2, ". Sua disciplina favorita é ", $disc)
+            }
+            if ($genero == "fem") {
+                document.write("<font size='6' color='light_blue'>")
+                document.write("Bem-vinda ", $nome, ", você tem ", $idade, " anos e vai cursar o curso de ", $curso, " no turno da ", $turno, " com os professores ", $prof1, " e ", $prof2, ". Sua disciplina favorita é ", $disc)
+            }
+            if ($genero == "out") {
+                document.write("<font size='6' color='light_blue'>")
+                document.write("Bem-vinde ", $nome, ", você tem ", $idade, " anos e vai cursar o curso de ", $curso, " no turno da ", $turno, " com os professores ", $prof1, " e ", $prof2, ". Sua disciplina favorita é ", $disc)
+            }
+            document.write("<br><br>")
+            document.write("<a href='./formulario.html'><img src='../Img/casa.jpg' width='5%'>")
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <font size="5">Por ser seu primeiro acesso, responda o formulário a seguir:</font><br><br>
+        <font size="6" color="black"> FORMULÁRIO </font>
+    <br>
+
+    <form name="FORM1" action="" method="post" onsubmit="return teste()">
+        <font size="4">
+            <table border="1" width="500">
+                <td width="1">
+        Nome: <input type="text" name="nm" length="13"> Idade: <input type="text" name="id" size="2" maxlength="3"> <br>
+        Gênero: <input type="radio" value="masc" name="fGenero">Masculino <input type="radio" value="fem"
+            name="fGenero">
+        Feminino <input type="radio" value="out" name="fGenero"> Outro <br>
+        Curso: <select name="fCurso">
+            <option value=""> [escolha] </option>
+            <option value="DS"> DS </option>
+            <option value="Mecânica"> Mecânica </option>
+            <option value="Solda"> Solda </option>
+        </select>
+        Turno: <select name="fTurno">
+            <option value=""> [escolha] </option>
+            <option value="manha"> manhã </option>
+            <option value="tarde"> tarde </option>
+            <option value="noite"> noite </option>
+        </select> <br>
+        Prof. 1: <input type="text" name="prof1"> Prof. 2: <input type="text" name="prof2"> <br>
+        Disciplpina que mais gosta: <br>
+        <input type="radio" name="fav" value="HTML"> HTML <br>
+        <input type="radio" name="fav" value="JavaScript"> JavaScript <br>
+        <input type="radio" name="fav" value="Arduino"> Arduino <br>
+        <input type="radio" name="fav" value="logica"> Lógica <br>
+        <input type="radio" name="fav" value="Gestalt"> Gestalt <br>
+        <input type="reset" value="Limpar"> <input type="submit" value="Gravar">
+</td></table></font></center></body>
+
+</html>
